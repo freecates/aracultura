@@ -1,3 +1,3 @@
 # aracultura
 
-El web d'ARA Cultura
+El web d'Ara Cultura
