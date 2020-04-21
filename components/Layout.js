@@ -74,7 +74,7 @@ const Layout = (props) => (
       }
 
       a {
-        color: inherit;
+        color: #22a270;
         text-decoration: none;
       }
 

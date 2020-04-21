@@ -15,9 +15,6 @@ const Serveis = ({ data, serveis }) => {
         />
         <Grid data={serveis} />
         <style jsx global>{`
-          .card {
-            flex-basis: 100%;
-          }
           .card header {
             display: flex;
             flex-wrap: wrap;
