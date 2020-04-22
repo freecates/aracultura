@@ -90,19 +90,19 @@ const Grid = ({ data }) => {
                                   )}
                                   <h3>{c.title.rendered} &rarr;</h3>
                               </header>
-                              {c.type == 'serveis' && (
-                                  <>
-                                      <h4>{c.acf.per_que && `Per què`}</h4>
-                                      <p>
-                                          {c.acf.per_que.substring(0, 120)}...{' '}
-                                          <Link href={`/${c.type}/${c.id}`}>
-                                              <a title={`Veure la fitxa de: ${c.title.rendered}`}>
-                                                  [+]
-                                              </a>
-                                          </Link>
-                                      </p>
-                                  </>
-                              )}
+
+                              <>
+                                  <h4>{c.acf.per_que && `Per què`}</h4>
+                                  <p>
+                                      {c.acf.per_que.substring(0, 120)}...{' '}
+                                      <Link href={`/${c.type}/${c.id}`}>
+                                          <a title={`Veure la fitxa de: ${c.title.rendered}`}>
+                                              [+]
+                                          </a>
+                                      </Link>
+                                  </p>
+                              </>
+
                               {!c.leadText ? null : <p>{c.leadText}</p>}
                               {!c.text ? null : (
                                   <p>
