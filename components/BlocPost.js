@@ -41,7 +41,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                 <meta name='twitter:title' content={title} />
                 <meta
                     name='twitter:image:src'
-                    content={`${imatge.url}`}
+                    content={`${!imatge ? null : imatge.url}`}
                 />
 
                 <script
@@ -68,7 +68,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
    }
   }, 
   "description": "${description}",
-  "image": "${imatge.url}",
+  "image": "${!imatge ? null : imatge.url}",
   "datePublished": "${datePublished}",
   "headline": "${title}"
 }`,
