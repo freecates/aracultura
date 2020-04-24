@@ -132,7 +132,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                             <TwitterShareButton
                                 url={`https://aracultura.now.sh/${type}/${id}`}
                                 title={title}
-                                hashtags={['coronavirus']}
+                                hashtags={['aracultura']}
                                 via='AdhocCultura'
                                 className='Post__some-network__share-button'
                             >
