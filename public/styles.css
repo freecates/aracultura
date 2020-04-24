@@ -9,7 +9,16 @@ h1 {
   color: #22a270;
 }
 hr {
-  border-top: 2px solid #22a270;
+  border: 0;
+  background-image: -webkit-linear-gradient(left, #ffffff, #22a270, #ffffff);
+  height: 1px;
+}
+figure {
+  display: block;
+  text-align: center;
+}
+figure img {
+  max-width: 160px;
 }
 blockquote {
   max-width: 70%;
@@ -73,12 +82,12 @@ blockquote:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 85rem;
+  max-width: 70rem;
   margin: 0 auto;
 }
 
 main {
-  padding: 5rem 0;
+  padding: 3rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -132,7 +141,7 @@ code {
   word-wrap: break-word;
   word-break: break-all;
 }
-@media (max-width: 600px) {
+@media (max-width: 569px) {
   main {
     padding: 0;
   }
@@ -148,6 +157,12 @@ code {
     height: 170px;
   }
   .title {
-    font-size: 3rem;
+    font-size: 2.1rem;
+  }
+  blockquote {
+    font-size: 1.5rem;
+  }
+  blockquote:before {
+    font-size: 8rem;
   }
 }

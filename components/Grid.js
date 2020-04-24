@@ -149,9 +149,10 @@ const Grid = ({ data }) => {
                   align-items: center;
                   justify-content: center;
                   flex-wrap: wrap;
-
                   max-width: 960px;
                   margin-top: 3rem;
+                  background: rgba(34, 162, 112, .1);
+                  border-radius: 10px;
               }
 
               .card {
@@ -161,9 +162,13 @@ const Grid = ({ data }) => {
                   text-align: left;
                   color: inherit;
                   text-decoration: none;
-                  border: 1px solid #eaeaea;
+                  border: 1px solid #22a270;
                   border-radius: 10px;
-                  transition: color 0.15s ease, border-color 0.15s ease;
+                  transition: background 1.15s ease;
+              }
+
+              .card:hover {
+                  background: #ffffff;
               }
 
               .card h3 {

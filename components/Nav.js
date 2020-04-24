@@ -5,19 +5,21 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <Link href='/'>
-        <a title='Anar a la home'>
+        <a className={styles.logo} title='Anar a la home'>
           <img src={`/logo-ara-cultura.svg`} alt='Logo Ara Cultura' />
         </a>
-      </Link>
-      <Link href='/serveis'>
-        <a>Acompanyament</a>
-      </Link>
-      <Link href='/projectes'>
-        <a>Implanta</a>
-      </Link>
-      <Link href='/inspira-t'>
-        <a>Inspira't</a>
-      </Link>
+        </Link>
+      <div>
+        <Link href='/serveis'>
+          <a>Acompanyament</a>
+        </Link>
+        <Link href='/projectes'>
+          <a>Implanta</a>
+        </Link>
+        <Link href='/inspira-t'>
+          <a>Inspira't</a>
+        </Link>
+      </div>
     </nav>
   );
 };
