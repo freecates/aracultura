@@ -24,13 +24,13 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                 <meta name='description' content={description} />
 
                 <meta property='fb:app_id' content='1064356173625695' />
-                <meta property='og:url' content={`https://nodevid.now.sh/${type}/${id}`} />
+                <meta property='og:url' content={`https://aracultura.now.sh/${type}/${id}`} />
                 <meta property='og:type' content='article' />
                 <meta property='og:title' content={title} />
                 <meta property='og:description' content={description} />
                 <meta
                     property='og:image'
-                    content={`https://nodevid.now.sh/icons/og-image-nodevid-web.png`}
+                    content={`https://aracultura.now.sh/icons/og-image-nodevid-web.png`}
                 />
                 <meta property='og:image:width' content={1024} />
                 <meta property='og:image:height' content={1024} />
@@ -41,7 +41,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                 <meta name='twitter:title' content={title} />
                 <meta
                     name='twitter:image:src'
-                    content={`https://nodevid.now.sh/icons/og-image-nodevid-web.png`}
+                    content={`${imatge.url}`}
                 />
 
                 <script
@@ -53,7 +53,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
   "@type": "NewsArticle",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "${`https://nodevid.now.sh` + id}"
+    "@id": "${`https://aracultura.now.sh/` + id}"
   },
   "author": {
     "@type": "Person",
@@ -64,18 +64,18 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
    "name": "Adhoc Cultura | Oxygen | DAUApps",
    "logo": {
      "@type": "ImageObject",
-     "url": "https://nodevid.now.sh/icons/og-image-nodevid-web.png"
+     "url": "https://aracultura.now.sh/icons/og-image-nodevid-web.png"
    }
   }, 
   "description": "${description}",
-  "image": "https://nodevid.now.sh/icons/og-image-nodevid-web.png",
+  "image": "${imatge.url}",
   "datePublished": "${datePublished}",
   "headline": "${title}"
 }`,
                     }}
                 />
             </Head>
-            <div class={styles.bloc}>
+            <div className={styles.bloc}>
                 <IntlProvider locale={'ca'} timeZone='Europe/Madrid'>
                     {!author ? null : (
                         <p>
@@ -121,7 +121,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                     <div className={styles.socialShareIcons}>
                         <div className={styles.PostSomeNetwork}>
                             <FacebookShareButton
-                                url={`https://nodevid.now.sh/${type}/${id}`}
+                                url={`https://aracultura.now.sh/${type}/${id}`}
                                 className='Post__some-network__share-button'
                             >
                                 <FacebookIcon size={25} round />
@@ -130,7 +130,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
 
                         <div className={styles.PostSomeNetwork}>
                             <TwitterShareButton
-                                url={`https://nodevid.now.sh/${type}/${id}`}
+                                url={`https://aracultura.now.sh/${type}/${id}`}
                                 title={title}
                                 hashtags={['coronavirus']}
                                 via='AdhocCultura'
@@ -142,7 +142,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
 
                         <div className={styles.PostSomeNetwork}>
                             <LinkedinShareButton
-                                url={`https://nodevid.now.sh/${type}/${id}`}
+                                url={`https://aracultura.now.sh/${type}/${id}`}
                                 title={title}
                                 className='Post__some-network__share-button'
                             >
@@ -152,9 +152,9 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
 
                         <div className={styles.PostSomeNetwork}>
                             <EmailShareButton
-                                url={`https://nodevid.now.sh/${type}/${id}`}
+                                url={`https://aracultura.now.sh/${type}/${id}`}
                                 subject={title}
-                                body={`Fes-li un cop d'ull a ${title} https://nodevid.now.sh/${type}/${id}`}
+                                body={`Fes-li un cop d'ull a ${title} https://aracultura.now.sh/${type}/${id}`}
                                 className='Post__some-network__share-button'
                             >
                                 <EmailIcon size={25} round />

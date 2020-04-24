@@ -151,7 +151,7 @@ const Grid = ({ data }) => {
                   flex-wrap: wrap;
                   max-width: 960px;
                   margin-top: 3rem;
-                  background: rgba(34, 162, 112, .1);
+                  background: rgba(112, 168, 59, .1);
                   border-radius: 10px;
               }
 
@@ -162,7 +162,7 @@ const Grid = ({ data }) => {
                   text-align: left;
                   color: inherit;
                   text-decoration: none;
-                  border: 1px solid #22a270;
+                  border: 1px solid #70a83b;
                   border-radius: 10px;
                   transition: background 1.15s ease;
               }
@@ -174,7 +174,7 @@ const Grid = ({ data }) => {
               .card h3 {
                   margin: 0 0 1rem 0;
                   font-size: 1.25rem;
-                  color: #22a270;
+                  color: #70a83b;
               }
 
               .card p {
