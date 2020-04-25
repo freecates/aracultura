@@ -27,6 +27,12 @@
     p {
         width: 100%;
     }
+    .paths {
+        margin-right: 1rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
     picture {
         display: block;
         img {

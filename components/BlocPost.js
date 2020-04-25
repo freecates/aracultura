@@ -14,7 +14,18 @@ import {
 import styles from './Bloc.module.scss';
 
 const BlocPost = ({ title, author, datePublished, description, id, type, content, paths }) => {
-    const { com, per_que, per_qui, imatge, contacte, descarregable, descripcio } = content;
+    const {
+        com,
+        per_que,
+        per_qui,
+        imatge,
+        contacte,
+        qui,
+        que,
+        on,
+        descarregable,
+        descripcio,
+    } = content;
     return (
         <>
             <Head>
@@ -39,10 +50,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                 <meta name='twitter:site' content='mexico_baila' />
                 <meta name='twitter:creator' content='mexico_baila' />
                 <meta name='twitter:title' content={title} />
-                <meta
-                    name='twitter:image:src'
-                    content={`${!imatge ? null : imatge.url}`}
-                />
+                <meta name='twitter:image:src' content={`${!imatge ? null : imatge.url}`} />
 
                 <script
                     type='application/ld+json'
@@ -96,22 +104,51 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                     </h2>
 
                     <div className={styles.grid}>
-                        <div className={styles.card}>
-                            <h4>Per què</h4>
-                            <p>{per_que}</p>
-                        </div>
-                        <div className={styles.card}>
-                            <h4>Descripció</h4>
-                            <p>{descripcio}</p>
-                        </div>
-                        <div className={styles.card}>
-                            <h4>Com</h4>
-                            <p>{com}</p>
-                        </div>
-                        <div className={styles.card}>
-                            <h4>Per qui</h4>
-                            <p>{per_qui}</p>
-                        </div>
+                        {!per_que ? null : (
+                            <div className={styles.card}>
+                                <h4>Per què</h4>
+                                <p>{per_que}</p>
+                            </div>
+                        )}
+                        {!descripcio ? null : (
+                            <div className={styles.card}>
+                                <h4>Descripció</h4>
+                                <p>{descripcio}</p>
+                            </div>
+                        )}
+                        {!com ? null : (
+                            <div className={styles.card}>
+                                <h4>Com</h4>
+                                <p>{com}</p>
+                            </div>
+                        )}
+                        {!per_qui ? null : (
+                            <div className={styles.card}>
+                                <h4>Per qui</h4>
+                                <p>{per_qui}</p>
+                            </div>
+                        )}
+                        {!que ? null : (
+                            <div className={styles.card}>
+                                <h4>Què</h4>
+                                <p>{que}</p>
+                            </div>
+                        )}
+                        {!qui ? null : (
+                            <div className={styles.card}>
+                                <h4>Qui</h4>
+                                <section dangerouslySetInnerHTML={{ __html: qui }} />
+                            </div>
+                        )}
+                        {!on ? null : (
+                            <div className={styles.card}>
+                                <h4>On</h4>
+                                <section
+                                    className='dont-break-out'
+                                    dangerouslySetInnerHTML={{ __html: on }}
+                                />
+                            </div>
+                        )}
                     </div>
 
                     <p>
@@ -174,15 +211,23 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                             })
                             .map((c, id) => (
                                 <Link key={id} href={c}>
-                                    <a>{id}</a>
+                                    <a className={styles.paths}>{id}</a>
                                 </Link>
                             ))}
                     </h3>
-                    <Link href={`/${type}`}>
-                        <a>
-                            <h3>&larr; Tornar</h3>
-                        </a>
-                    </Link>
+                    {type == 'recursos' ? (
+                        <Link href={`/inspirat`}>
+                            <a>
+                                <h3>&larr; Tornar</h3>
+                            </a>
+                        </Link>
+                    ) : (
+                        <Link href={`/${type}`}>
+                            <a>
+                                <h3>&larr; Tornar</h3>
+                            </a>
+                        </Link>
+                    )}
                 </IntlProvider>
             </div>
         </>

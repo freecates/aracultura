@@ -13,6 +13,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-intl": "^4.5.0",
+    "react-scroll-up-button": "^1.6.4",
     "react-share": "^4.1.0",
     "react-social-icons": "^4.1.0",
     "sass": "^1.26.3"

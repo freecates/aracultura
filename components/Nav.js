@@ -16,7 +16,7 @@ const Nav = () => {
         <Link href='/projectes'>
           <a>Implanta</a>
         </Link>
-        <Link href='/inspira-t'>
+        <Link href='/inspirat'>
           <a>Inspira't</a>
         </Link>
       </div>
