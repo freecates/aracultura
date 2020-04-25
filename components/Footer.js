@@ -5,7 +5,7 @@ const Footer = () => (
     <footer className={styles.footer}>
         <Link href='/'>
             <a title='Anar a la home'>
-                <img src={`/logo-ara-cultura.svg`} alt='Logo Ara Cultura' />
+                <img loading='lazy' src={`/logo-ara-cultura.svg`} alt='Logo Ara Cultura' />
             </a>
         </Link>
         Powered by:{' '}

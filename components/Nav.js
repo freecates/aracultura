@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className={styles.nav}>
       <Link href='/'>
         <a className={styles.logo} title='Anar a la home'>
-          <img src={`/logo-ara-cultura.svg`} alt='Logo Ara Cultura' />
+          <img loading='lazy' src={`/logo-ara-cultura.svg`} alt='Logo Ara Cultura' />
         </a>
         </Link>
       <div>

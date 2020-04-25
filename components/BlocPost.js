@@ -87,7 +87,7 @@ const BlocPost = ({ title, author, datePublished, description, id, type, content
                     )}
                     {!imatge ? null : (
                         <picture>
-                            <img src={imatge.url} width={'100%'} />
+                            <img loading='lazy' src={imatge.url} width={'100%'} />
                         </picture>
                     )}
                     <h1 className='title'>{title}</h1>
