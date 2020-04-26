@@ -3,10 +3,13 @@ import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 
 const Actualitat = ({ data, posts }) => {
-  const { title, content } = data;
+  const { title, content, acf } = data;
   return (
     <>
       <Layout>
+        <figure>
+          <img src={acf.imatge.url} loading='lazy' />
+        </figure>
         <h1 className='title'>{title.rendered}</h1>
 
         <div
