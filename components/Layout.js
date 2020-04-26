@@ -1,6 +1,18 @@
+import routerEvents from 'next-router-events';
+import NProgress from 'nprogress';
 import { TinyButton as ScrollUpButton } from 'react-scroll-up-button';
 import Footer from './Footer';
 import Nav from './Nav';
+
+routerEvents.on('routeChangeStart', () => {
+  NProgress.start();
+});
+routerEvents.on('routeChangeComplete', () => {
+  NProgress.done();
+});
+routerEvents.on('routeChangeError', () => {
+  NProgress.done();
+});
 
 const Layout = (props) => (
   <>
@@ -12,6 +24,7 @@ const Layout = (props) => (
       <main>{props.children}</main>
     </div>
     <Footer />
+    <link rel='stylesheet' type='text/css' href='/nprogress.css' />
   </>
 );
 
