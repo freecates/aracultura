@@ -3,10 +3,13 @@ import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Home = ({ data }) => {
-  const { title, content } = data;
+  const { title, content, excerpt } = data;
   return (
     <>
-      <HTMLHead title={title.rendered} description={title.rendered} />
+      <HTMLHead
+        title={title.rendered}
+        description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+      />
       <Layout page={'home'}>
         <h1 className='title'>{title.rendered}</h1>
         <div

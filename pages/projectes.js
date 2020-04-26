@@ -1,11 +1,16 @@
 import fetch from 'isomorphic-unfetch';
 import Grid from '../components/Grid';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Projectes = ({ data, projectes }) => {
-  const { title, content } = data;
+  const { title, content, excerpt } = data;
   return (
     <>
+      <HTMLHead
+        title={title.rendered}
+        description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+      />
       <Layout>
         <h1 className='title'>{title.rendered}</h1>
 
@@ -42,7 +47,9 @@ const Projectes = ({ data, projectes }) => {
 export const getStaticProps = async () => {
   const res = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/pages/80`);
   const data = await res.json();
-  const res2 = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/projectes`);
+  const res2 = await fetch(
+    `https://cms.aracultura.com/wp-json/wp/v2/projectes`
+  );
   const data2 = await res2.json();
   return {
     props: {

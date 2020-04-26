@@ -1,11 +1,16 @@
 import fetch from 'isomorphic-unfetch';
 import Grid from '../components/Grid';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Serveis = ({ data, serveis }) => {
-  const { title, content } = data;
+  const { title, content, excerpt } = data;
   return (
     <>
+      <HTMLHead
+        title={title.rendered}
+        description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+      />
       <Layout>
         <h1 className='title'>{title.rendered}</h1>
 

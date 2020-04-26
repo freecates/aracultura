@@ -1,11 +1,16 @@
 import fetch from 'isomorphic-unfetch';
 import Grid from '../components/Grid';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Actualitat = ({ data, posts }) => {
-  const { title, content, acf } = data;
+  const { title, content, acf, excerpt } = data;
   return (
     <>
+      <HTMLHead
+        title={title.rendered}
+        description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+      />
       <Layout>
         <figure>
           <img src={acf.imatge.url} loading='lazy' />
