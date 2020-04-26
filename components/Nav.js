@@ -6,9 +6,13 @@ const Nav = () => {
     <nav className={styles.nav}>
       <Link href='/'>
         <a className={styles.logo} title='Anar a la home'>
-          <img loading='lazy' src={`/logo-ara-cultura.svg`} alt='Logo Ara Cultura' />
+          <img
+            loading='lazy'
+            src={`/logo-ara-cultura.svg`}
+            alt='Logo Ara Cultura'
+          />
         </a>
-        </Link>
+      </Link>
       <div>
         <Link href='/serveis'>
           <a>Acompanyament</a>
@@ -18,6 +22,9 @@ const Nav = () => {
         </Link>
         <Link href='/inspirat'>
           <a>Inspira't</a>
+        </Link>
+        <Link href='/actualitat'>
+          <a>Actualitat</a>
         </Link>
       </div>
     </nav>
