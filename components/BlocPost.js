@@ -57,7 +57,7 @@ const BlocPost = ({
         <meta property='og:description' content={description} />
         <meta
           property='og:image'
-          content={`https://www.aracultura.com/icons/og-image-nodevid-web.png`}
+          content={`https://www.aracultura.com/icons/og-image-aracultura-web.png`}
         />
         <meta property='og:image:width' content={1024} />
         <meta property='og:image:height' content={1024} />
@@ -91,7 +91,7 @@ const BlocPost = ({
    "name": "Adhoc Cultura | Oxygen | DAUApps",
    "logo": {
      "@type": "ImageObject",
-     "url": "https://www.aracultura.com/icons/og-image-nodevid-web.png"
+     "url": "https://www.aracultura.com/icons/og-image-aracultura-web.png"
    }
   }, 
   "description": "${description}",

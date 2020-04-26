@@ -1,10 +1,12 @@
 import fetch from 'isomorphic-unfetch';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Home = ({ data }) => {
   const { title, content } = data;
   return (
     <>
+      <HTMLHead title={title.rendered} description={title.rendered} />
       <Layout page={'home'}>
         <h1 className='title'>{title.rendered}</h1>
         <div
