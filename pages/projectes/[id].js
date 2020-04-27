@@ -1,11 +1,12 @@
 import fetch from 'isomorphic-unfetch';
 import BlocPost from '../../components/BlocPost';
 import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';
 
 const Post = ({ post, paths }) => {
   const { title, acf, type, id } = post;
   return (
-    <>
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <Layout>
         <BlocPost
           title={title.rendered}
@@ -21,7 +22,7 @@ const Post = ({ post, paths }) => {
           max-width: 50rem;
         }
       `}</style>
-    </>
+    </motion.div>
   );
 };
 
