@@ -13,7 +13,7 @@ const Serveis = ({ data, serveis }) => {
       />
       <Layout>
         <figure>
-          <img src={acf.imatge.url} loading='lazy' width='100%' />
+          <img src={acf.imatge.url} alt={acf.imatge.alt} loading='lazy' width='100%' />
         </figure>
         <h1 className='title'>{title.rendered}</h1>
 
