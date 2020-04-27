@@ -1,3 +1,4 @@
+import { FaFilePdf } from 'react-icons/fa';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FormattedDate, IntlProvider } from 'react-intl';
@@ -40,6 +41,37 @@ const stagger = {
             staggerChildren: 0.1,
         },
     },
+};
+
+const Descarregable = ({ descarregable, title }) => {
+    return (
+        <>
+            {!descarregable ? null : (
+                <p>
+                    Descarrega-te'l:{' '}
+                    <a
+                        target={`_blank`}
+                        title={`Descarrega't el PDF "${title}"`}
+                        href={descarregable}
+                    >
+                        <FaFilePdf /> &darr;
+                    </a>
+                </p>
+            )}
+        </>
+    );
+};
+
+const Contacte = ({ contacte }) => {
+    return (
+        <>
+            {!contacte ? null : (
+                <p>
+                    Contacte: <a href={`mailto:${contacte}`}>{contacte}</a>
+                </p>
+            )}
+        </>
+    );
 };
 
 const BlocPost = ({ title, author, date, description, id, type, content, paths }) => {
@@ -146,11 +178,8 @@ const BlocPost = ({ title, author, date, description, id, type, content, paths }
                         />
                     )}
 
-                    {!contacte ? null : (
-                        <p>
-                            Contacte: <a href={`mailto:${contacte}`}>{contacte}</a>
-                        </p>
-                    )}
+                    <Contacte contacte={contacte} />
+                    <Descarregable descarregable={descarregable} title={title} />
 
                     <motion.div variants={fadeInUp} className={styles.grid}>
                         {!per_que ? null : (
@@ -200,11 +229,8 @@ const BlocPost = ({ title, author, date, description, id, type, content, paths }
                         )}
                     </motion.div>
 
-                    {!contacte ? null : (
-                        <p>
-                            Contacte: <a href={`mailto:${contacte}`}>{contacte}</a>
-                        </p>
-                    )}
+                    <Descarregable descarregable={descarregable} title={title} />
+                    <Contacte contacte={contacte} />
 
                     <div className={styles.socialShareIcons}>
                         <div className={styles.PostSomeNetwork}>
@@ -272,7 +298,7 @@ const BlocPost = ({ title, author, date, description, id, type, content, paths }
                             })
                             .map((c, id) => (
                                 <Link key={id} href={c}>
-                                    <a className={styles.paths}>{id}</a>
+                                    <a className={styles.paths}>{id} &rarr;</a>
                                 </Link>
                             ))}
                     </h3>

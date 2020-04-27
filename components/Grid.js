@@ -32,13 +32,23 @@ const Grid = ({ data }) => {
         <motion.div variants={stagger} className='grid'>
             {data
                 .sort((a, b) => {
-                    if (a.datePublished > b.datePublished) {
-                        return -1;
+                    if (a.type == 'post') {
+                        if (a.date > b.date) {
+                            return -1;
+                        }
+                        if (a.date < b.date) {
+                            return 1;
+                        }
+                        return 0;
+                    } else {
+                        if (a.date < b.date) {
+                            return -1;
+                        }
+                        if (a.date > b.date) {
+                            return 1;
+                        }
+                        return 0;
                     }
-                    if (a.datePublished < b.datePublished) {
-                        return 1;
-                    }
-                    return 0;
                 })
                 .map((c, id) => (
                     <motion.div variants={fadeInUp} className='card' key={c.id} id={id}>
