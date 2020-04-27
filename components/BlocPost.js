@@ -65,7 +65,7 @@ const BlocPost = ({
               <meta name='twitter:site' content='mexico_baila' />
               <meta name='twitter:creator' content='mexico_baila' />
               <meta name='twitter:title' content={title} />
-              <meta name='twitter:image:src' content={`${!imatge ? null : imatge.url}`} />
+              <meta name='twitter:image:src' content={`https://www.aracultura.com/icons/og-image-aracultura-web.png`} />
 
               <script
                   type='application/ld+json'
@@ -91,8 +91,8 @@ const BlocPost = ({
    }
   }, 
   "description": "${description}",
-  "image": "${!imatge ? null : imatge.url}",
-  "date": "${date}",
+  "image": "https://www.aracultura.com/icons/og-image-aracultura-web.png",
+  "datePublished": "${date}",
   "headline": "${title}"
 }`,
                   }}
