@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import fetch from 'isomorphic-unfetch';
 import Grid from '../components/Grid';
 import HTMLHead from '../components/HTMLHead';
@@ -6,7 +7,7 @@ import Layout from '../components/Layout';
 const Serveis = ({ data, serveis }) => {
   const { title, content, excerpt, acf } = data;
   return (
-    <>
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <HTMLHead
         title={title.rendered}
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
@@ -43,7 +44,7 @@ const Serveis = ({ data, serveis }) => {
           }
         `}</style>
       </Layout>
-    </>
+    </motion.div>
   );
 };
 

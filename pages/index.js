@@ -1,11 +1,12 @@
 import fetch from 'isomorphic-unfetch';
 import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
 
 const Home = ({ data }) => {
   const { title, content, excerpt } = data;
   return (
-    <>
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <HTMLHead
         title={title.rendered}
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
@@ -17,7 +18,7 @@ const Home = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: content.rendered }}
         />
       </Layout>
-    </>
+    </motion.div>
   );
 };
 

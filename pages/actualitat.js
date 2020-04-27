@@ -2,11 +2,12 @@ import fetch from 'isomorphic-unfetch';
 import Grid from '../components/Grid';
 import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
 
 const Actualitat = ({ data, posts }) => {
   const { title, content, acf, excerpt } = data;
   return (
-    <>
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <HTMLHead
         title={title.rendered}
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
@@ -43,7 +44,7 @@ const Actualitat = ({ data, posts }) => {
           }
         `}</style>
       </Layout>
-    </>
+    </motion.div>
   );
 };
 
