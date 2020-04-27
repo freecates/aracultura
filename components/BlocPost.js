@@ -127,6 +127,12 @@ const BlocPost = ({
             />
           )}
 
+          {!contacte ? null : (
+            <p>
+              Contacte: <a href={`mailto:${contacte}`}>{contacte}</a>
+            </p>
+          )}
+
           <div className={styles.grid}>
             {!per_que ? null : (
               <div className={styles.card}>
