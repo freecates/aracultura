@@ -118,9 +118,7 @@ const BlocPost = ({
             </picture>
           )}
           <h1 className='title'>{title}</h1>
-          <h2>
-            <content>{description}</content>
-          </h2>
+          <h2 dangerouslySetInnerHTML={{ __html: description }} />
 
           {type == 'post' && (
             <div
@@ -139,7 +137,7 @@ const BlocPost = ({
             {!descripcio ? null : (
               <div className={styles.card}>
                 <h4>Descripció</h4>
-                <p>{descripcio}</p>
+                <p dangerouslySetInnerHTML={{ __html: descripcio }} />
               </div>
             )}
             {!com ? null : (

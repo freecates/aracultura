@@ -13,7 +13,7 @@ const Actualitat = ({ data, posts }) => {
       />
       <Layout>
         <figure>
-          <img src={acf.imatge.url} loading='lazy' />
+        <img src={acf.imatge.url} loading='lazy' width='100%' />
         </figure>
         <h1 className='title'>{title.rendered}</h1>
 
