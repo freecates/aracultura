@@ -4,7 +4,7 @@ import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Serveis = ({ data, serveis }) => {
-  const { title, content, excerpt } = data;
+  const { title, content, excerpt, acf } = data;
   return (
     <>
       <HTMLHead
@@ -12,6 +12,9 @@ const Serveis = ({ data, serveis }) => {
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
       />
       <Layout>
+        <figure>
+          <img src={acf.imatge.url} loading='lazy' />
+        </figure>
         <h1 className='title'>{title.rendered}</h1>
 
         <div
