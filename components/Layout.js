@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import routerEvents from 'next-router-events';
 import NProgress from 'nprogress';
 import { TinyButton as ScrollUpButton } from 'react-scroll-up-button';
@@ -14,7 +15,9 @@ routerEvents.on('routeChangeError', () => {
   NProgress.done();
 });
 
-const Layout = (props) => (
+const Layout = (props) => { 
+  const [media, setMedia] = useState('print')
+  return (  
   <>
     <Nav />
     <div className='container'>
@@ -24,8 +27,8 @@ const Layout = (props) => (
       <main>{props.children}</main>
     </div>
     <Footer />
-    <link rel='stylesheet' type='text/css' href='/nprogress.css' />
+    <link rel='stylesheet' type='text/css' media={media} onLoad={() => setMedia('all')} href='/nprogress.css' />
   </>
-);
+);}
 
 export default Layout;
