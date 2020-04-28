@@ -133,8 +133,9 @@ const Grid = ({ data }) => {
 
                 @media (max-width: 600px) {
                     .grid {
-                        width: 100%;
+                        width: 105%;
                         flex-direction: column;
+                        margin: 0 -0.5rem;
                     }
                 }
             `}</style>
