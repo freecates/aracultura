@@ -304,20 +304,20 @@ const BlocPost = ({ title, author, date, description, id, type, content, paths }
                     </h3>
                     {type == 'recursos' || type == 'post' ? (
                         type == 'recursos' ? (
-                            <Link href={`/inspirat`}>
+                            <Link href={`/inspirat#llistat`}>
                                 <a>
                                     <h3>&larr; Tornar</h3>
                                 </a>
                             </Link>
                         ) : (
-                            <Link href={`/actualitat`}>
+                            <Link href={`/actualitat#llistat`}>
                                 <a>
                                     <h3>&larr; Tornar</h3>
                                 </a>
                             </Link>
                         )
                     ) : (
-                        <Link href={`/${type}`}>
+                        <Link href={`/${type}#llistat`}>
                             <a>
                                 <h3>&larr; Tornar</h3>
                             </a>

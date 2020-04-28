@@ -29,7 +29,7 @@ const stagger = {
 
 const Grid = ({ data }) => {
     return (
-        <motion.div variants={stagger} className='grid'>
+        <motion.div variants={stagger} className='grid' id={'llistat'}>
             {data
                 .sort((a, b) => {
                     if (a.type == 'post') {
