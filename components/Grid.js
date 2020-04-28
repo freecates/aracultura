@@ -54,7 +54,7 @@ const Grid = ({ data }) => {
                     <motion.div variants={fadeInUp} className='card' key={c.id} id={id}>
                         <header>
                             {!c.acf.imatge ? null : (
-                                <img loading='lazy' src={c.acf.imatge.url} alt={c.title.rendered} />
+                                <img loading='lazy' src={c.acf.imatge.url} alt={c.title.rendered} width={`60`} />
                             )}
                             <h3>
                                 <span dangerouslySetInnerHTML={{ __html: c.title.rendered }} />
