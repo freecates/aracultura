@@ -10,6 +10,7 @@ const Home = ({ data }) => {
       <HTMLHead
         title={title.rendered}
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+        page={'home'}
       />
       <Layout page={'home'}>
         <h1 className='title'>{title.rendered}</h1>

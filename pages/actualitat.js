@@ -5,12 +5,13 @@ import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 
 const Actualitat = ({ data, posts }) => {
-  const { title, content, acf, excerpt } = data;
+  const { title, content, acf, excerpt, slug } = data;
   return (
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <HTMLHead
         title={title.rendered}
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+        slug={slug}
       />
       <Layout>
         <figure>

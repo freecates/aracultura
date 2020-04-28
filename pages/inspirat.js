@@ -5,12 +5,13 @@ import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 
 const Inspirat = ({ data, recursos }) => {
-  const { title, content, excerpt, acf } = data;
+  const { title, content, excerpt, acf, slug } = data;
   return (
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <HTMLHead
         title={title.rendered}
         description={excerpt.rendered.replace(/(<([^>]+)>)/gi, '')}
+        slug={slug}
       />
       <Layout>
         <figure>
