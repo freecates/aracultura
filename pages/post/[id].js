@@ -28,7 +28,16 @@ const Post = ({ post, paths }) => {
   );
 };
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
+  const res = await fetch('https://cms.aracultura.com/wp-json/wp/v2/posts');
+  const posts = await res.json();
+
+  const paths = posts.map((post) => `/${post.type}/${post.id}`);
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
   const res = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/posts`);
   const dataRes = await res.json();
 

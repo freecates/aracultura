@@ -9,6 +9,7 @@ const Footer = () => (
           loading='lazy'
           src={`/logo-ara-cultura.svg`}
           alt='Logo Ara Cultura'
+          width={'212'}
         />
       </a>
     </Link>

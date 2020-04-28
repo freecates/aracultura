@@ -1,6 +1,6 @@
 .nav {
   img {
-    width: 212px;
+    max-width: 212px;
   }
   a {
     display: block;
@@ -27,7 +27,7 @@
   @media (max-width: 568px) {
     margin-bottom: 1rem;
     img {
-      width: 159px;
+      max-width: 159px;
     }
     div {
       a {

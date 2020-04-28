@@ -49,7 +49,7 @@ const Actualitat = ({ data, posts }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/pages/161`);
   const data = await res.json();
   const res2 = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/posts`);

@@ -48,7 +48,7 @@ const Descarregable = ({ descarregable, title }) => {
         <>
             {!descarregable ? null : (
                 <p>
-                    Descarrega-te'l:{' '}
+                    Descarrega-te'l:
                     <a
                         target={`_blank`}
                         title={`Descarrega't el PDF "${title}"`}
@@ -163,7 +163,7 @@ const BlocPost = ({ title, author, date, description, id, type, content, paths }
                     )}
                     {!imatge ? null : (
                         <picture>
-                            <img loading='lazy' src={imatge.url} width={'100%'} />
+                            <img loading='lazy' src={imatge.url} width={'160'} />
                         </picture>
                     )}
                     <motion.div variants={fadeInUp}>
