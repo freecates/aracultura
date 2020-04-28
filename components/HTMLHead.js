@@ -56,6 +56,19 @@ const HTMLHead = ({ title, description, page, slug }) => (
           }`,
             }}
         />
+        <link rel='preconnect' href='https://www.google-analytics.com' crossOrigin={'true'} />
+
+        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-47226335-9'></script>
+
+        <script
+            dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              
+                gtag('config', 'UA-47226335-9');`,
+            }}
+        ></script>
     </Head>
 );
 
