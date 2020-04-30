@@ -33,6 +33,7 @@ const Banners = ({ banners }) => {
                             title={b.acf.banner_dk.title}
                             target={'_blank'}
                             key={id}
+                            rel={'noreferrer noopener'}
                         >
                             <figure>
                                 {isDesktopOrLaptop && (
@@ -41,6 +42,7 @@ const Banners = ({ banners }) => {
                                         loading={'lazy'}
                                         width={b.acf.banner_dk.width}
                                         height={b.acf.banner_dk.height}
+                                        alt={b.acf.banner_dk.alt}
                                     />
                                 )}
                                 {isMobileDevice && (
@@ -49,6 +51,7 @@ const Banners = ({ banners }) => {
                                         loading={'lazy'}
                                         width={b.acf.banner_mobile.width}
                                         height={b.acf.banner_mobile.height}
+                                        alt={b.acf.banner_mobile.alt}
                                     />
                                 )}
                             </figure>
