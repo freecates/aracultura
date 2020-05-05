@@ -15,7 +15,7 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from 'react-share';
-import styles from './Bloc.module.scss';
+import styles from './BlocPost.module.scss';
 
 let easing = [0.6, -0.05, 0.01, 0.99];
 
@@ -312,20 +312,20 @@ const BlocPost = ({
             type == 'recursos' ? (
               <h3>
                 <Link href={`/inspirat#llistat`}>
-                  <a className={styles.button}>&larr; Tornar</a>
+                  <a className={'button'}>&larr; Tornar</a>
                 </Link>
               </h3>
             ) : (
               <h3>
                 <Link href={`/actualitat#llistat`}>
-                  <a className={styles.button}>&larr; Tornar</a>
+                  <a className={'button'}>&larr; Tornar</a>
                 </Link>
               </h3>
             )
           ) : (
             <h3>
               <Link href={`/${type}#llistat`}>
-                <a className={styles.button}>&larr; Tornar</a>
+                <a className={'button'}>&larr; Tornar</a>
               </Link>
             </h3>
           )}

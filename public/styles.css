@@ -100,6 +100,15 @@ a {
   color: #70a83b;
   text-decoration: none;
 }
+.button {
+  background: #70a83b;
+  color: #ffffff;
+  padding: 0 1rem;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #57812d;
+}
 
 .title a {
   color: #0070f3;
@@ -141,6 +150,9 @@ code {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
+}
+.has-text-align-center {
+  text-align: center;
 }
 @media (max-width: 569px) {
   main {
