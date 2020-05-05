@@ -123,9 +123,10 @@ const BlocPost = ({
         <meta property='og:image:height' content={1024} />
 
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:site' content='mexico_baila' />
-        <meta name='twitter:creator' content='mexico_baila' />
+        <meta name='twitter:site' content='aracultura' />
+        <meta name='twitter:creator' content='AdhocCultura' />
         <meta name='twitter:title' content={title} />
+        <meta name='twitter:description' content={description} />
         <meta
           name='twitter:image:src'
           content={`https://www.aracultura.com/icons/og-image-aracultura-web.png`}
