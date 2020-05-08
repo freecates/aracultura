@@ -52,6 +52,8 @@ const Grid = ({ data }) => {
                 })
                 .map((c, id) => (
                     <motion.div variants={fadeInUp} className='card' key={c.id} id={id}>
+                        <div>
+
                         <header>
                             {!c.acf.imatge ? null : (
                                 <img loading='lazy' src={c.acf.imatge.url} alt={c.title.rendered} width={`60`} />
@@ -75,13 +77,14 @@ const Grid = ({ data }) => {
                         {c.type == 'post' ? (
                             <>
                                 <p>
-                                    {c.acf.destacat} ...{' '}
+                                    {c.acf.destacat.substring(0, 120)}...{' '}
                                     <Link href={`/${c.type}/${c.id}`}>
                                         <a title={`Veure: ${c.title.rendered}`}>[+]</a>
                                     </Link>
                                 </p>
                             </>
                         ) : null}
+                        </div>
                     </motion.div>
                 ))}
             <style jsx global>{`
@@ -97,7 +100,11 @@ const Grid = ({ data }) => {
                 }
 
                 .card {
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
                     margin: 1rem;
+                    min-height: 360px;
                     flex-basis: 45%;
                     padding: 1.5rem;
                     text-align: left;
