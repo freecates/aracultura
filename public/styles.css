@@ -142,6 +142,8 @@ h2 {
   color: #ffffff;
   background: #70a83b;
   font-weight: 100;
+  width: 115%;
+  margin-left:-7.5%;
 }
 
 code {
@@ -188,8 +190,6 @@ code {
 }
 @media( min-width: 768px) {
   .featured {
-    width: 115%;
-    margin-left:-7.5%;
     font-size: 3rem;
     padding: 4rem;
   }
