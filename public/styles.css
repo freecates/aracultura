@@ -136,6 +136,13 @@ h2 {
   line-height: 1.5;
   font-size: 1.5rem;
 }
+.featured {
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background: #70a83b;
+  font-weight: 100;
+}
 
 code {
   background: #fafafa;
@@ -177,5 +184,19 @@ code {
   }
   blockquote:before {
     font-size: 8rem;
+  }
+}
+@media( min-width: 768px) {
+  .featured {
+    width: 115%;
+    margin-left:-7.5%;
+    font-size: 3rem;
+    padding: 4rem;
+  }
+}
+@media( min-width: 1024px) {
+  .featured {
+    font-size: 4rem;
+    padding: 6rem;
   }
 }
