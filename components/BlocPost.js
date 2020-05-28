@@ -175,7 +175,7 @@ const BlocPost = ({
           )}
           {!imatge ? null : (
             <picture>
-              <img loading='lazy' src={imatge.url} width={'160'} />
+              <img loading='lazy' src={imatge.url} alt={title} width={'160'} />
             </picture>
           )}
           <motion.div variants={fadeInUp}>
