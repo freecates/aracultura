@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import BlocPost from '../../components/BlocPost';
 import Layout from '../../components/Layout';
 import { motion } from 'framer-motion';

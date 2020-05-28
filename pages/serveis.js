@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import fetch from 'isomorphic-unfetch';
 import Grid from '../components/Grid';
 import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';

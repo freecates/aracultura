@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "framer-motion": "^1.10.3",
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "9.3.5",
+    "next": "9.4",
     "next-router-events": "^2.1.0",
     "nprogress": "^0.2.0",
     "react": "16.13.1",
