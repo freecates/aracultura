@@ -52,7 +52,9 @@ const Descarregable = ({ descarregable, title }) => {
           <a
             target={`_blank`}
             title={`Descarrega't el PDF "${title}"`}
-            href={descarregable}>
+            href={descarregable}
+            rel='noopener'
+            rel='noreferrer'>
             <FaFilePdf /> &darr;
           </a>
         </p>
