@@ -227,7 +227,7 @@ const BlocPost = ({
               </div>
             )}
             {!qui ? null : (
-              <div className={styles.card}>
+              <div className={`${qui.length >= 500 ? `${styles.card} ${styles.large}` : styles.card}`}>
                 <h4>Qui</h4>
                 <section dangerouslySetInnerHTML={{ __html: qui }} />
               </div>
