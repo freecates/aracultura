@@ -84,6 +84,7 @@ const BlocPost = ({
   type,
   content,
   paths,
+  slug
 }) => {
   const {
     com,
@@ -112,7 +113,7 @@ const BlocPost = ({
         <meta property='fb:app_id' content='1064356173625695' />
         <meta
           property='og:url'
-          content={`https://www.aracultura.com/${type}/${id}`}
+          content={`https://www.aracultura.com/${type}/${slug}`}
         />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={title} />
@@ -143,7 +144,7 @@ const BlocPost = ({
   "@type": "NewsArticle",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "${`https://www.aracultura.com/` + id}"
+    "@id": "${`https://www.aracultura.com/` + slug}"
   },
   "author": {
     "@type": "Person",
@@ -249,7 +250,7 @@ const BlocPost = ({
           <div className={styles.socialShareIcons}>
             <div className={styles.PostSomeNetwork}>
               <FacebookShareButton
-                url={`https://www.aracultura.com/${type}/${id}`}
+                url={`https://www.aracultura.com/${type}/${slug}`}
                 className='Post__some-network__share-button'>
                 <FacebookIcon size={25} round />
               </FacebookShareButton>
@@ -257,7 +258,7 @@ const BlocPost = ({
 
             <div className={styles.PostSomeNetwork}>
               <TwitterShareButton
-                url={`https://www.aracultura.com/${type}/${id}`}
+                url={`https://www.aracultura.com/${type}/${slug}`}
                 title={title}
                 hashtags={['aracultura']}
                 via='AdhocCultura'
@@ -268,7 +269,7 @@ const BlocPost = ({
 
             <div className={styles.PostSomeNetwork}>
               <LinkedinShareButton
-                url={`https://www.aracultura.com/${type}/${id}`}
+                url={`https://www.aracultura.com/${type}/${slug}`}
                 title={title}
                 className='Post__some-network__share-button'>
                 <LinkedinIcon size={25} round />
@@ -277,7 +278,7 @@ const BlocPost = ({
 
             <div className={styles.PostSomeNetwork}>
               <WhatsappShareButton
-                url={`https://www.aracultura.com/${type}/${id}`}
+                url={`https://www.aracultura.com/${type}/${slug}`}
                 title={title}
                 className='Post__some-network__share-button'>
                 <WhatsappIcon size={25} round />
@@ -286,9 +287,9 @@ const BlocPost = ({
 
             <div className={styles.PostSomeNetwork}>
               <EmailShareButton
-                url={`https://www.aracultura.com/${type}/${id}`}
+                url={`https://www.aracultura.com/${type}/${slug}`}
                 subject={title}
-                body={`Fes-li un cop d'ull a ${title} https://www.aracultura.com/${type}/${id}`}
+                body={`Fes-li un cop d'ull a ${title} https://www.aracultura.com/${type}/${slug}`}
                 className='Post__some-network__share-button'>
                 <EmailIcon size={25} round />
               </EmailShareButton>
