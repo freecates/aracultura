@@ -11,6 +11,7 @@
     "framer-motion": "^1.10.3",
     "next": "9.4",
     "next-router-events": "^2.1.0",
+    "nextjs-sitemap-generator": "^1.0.0",
     "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
