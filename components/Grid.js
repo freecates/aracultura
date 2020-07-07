@@ -68,7 +68,7 @@ const Grid = ({ data }) => {
                                 <h4>{c.acf.per_que && `Per què`}</h4>
                                 <p>
                                     {c.acf.per_que.substring(0, 120)}...{' '}
-                                    <Link href={`/${c.type}/${c.id}`}>
+                                    <Link href={`/${c.type}/${c.slug}`}>
                                         <a title={`Veure la fitxa de: ${c.title.rendered}`}>[+]</a>
                                     </Link>
                                 </p>
@@ -78,7 +78,7 @@ const Grid = ({ data }) => {
                             <>
                                 <p>
                                     {c.acf.destacat.substring(0, 120)}...{' '}
-                                    <Link href={`/${c.type}/${c.id}`}>
+                                    <Link href={`/${c.type}/${c.slug}`}>
                                         <a title={`Veure: ${c.title.rendered}`}>[+]</a>
                                     </Link>
                                 </p>
