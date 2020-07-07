@@ -18,7 +18,7 @@ const HTMLHead = ({ title, description, page, slug }) => (
         <link rel='apple-touch-icon' href='/icons/android-chrome-192x192.png' />
         <meta name='msapplication-TileImage' content='/icons/android-chrome-192x192.png' />
         <meta property='fb:app_id' content='1064356173625695' />
-        {page == 'home' ? (
+        {page == 'home' || page == '404' ? (
             <meta property='og:url' content={`https://www.aracultura.com/`} />
         ) : (
             <meta property='og:url' content={`https://www.aracultura.com/${slug}`} />
