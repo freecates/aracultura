@@ -182,7 +182,7 @@ const BlocPost = ({
             </picture>
           )}
           <motion.div variants={fadeInUp}>
-            <h1 className='title'>{title}</h1>
+            <h1 className='title' dangerouslySetInnerHTML={{ __html: title }} />
             <h2 dangerouslySetInnerHTML={{ __html: description }} />
           </motion.div>
 
