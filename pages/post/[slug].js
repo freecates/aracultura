@@ -1,9 +1,15 @@
+import { useRouter } from 'next/router';
 import BlocPost from '../../components/BlocPost';
 import Layout from '../../components/Layout';
 import { motion } from 'framer-motion';
 
 const Post = ({ post, paths }) => {
   const { title, acf, type, id, date, author, content, slug } = post;
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <Layout>
@@ -34,7 +40,7 @@ export async function getStaticPaths() {
 
   const paths = posts.map((post) => `/${post.type}/${post.slug}`);
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {

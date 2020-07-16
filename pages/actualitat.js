@@ -58,6 +58,7 @@ export const getStaticProps = async () => {
             data: data,
             posts: data2,
         },
+        unstable_revalidate: 60
     };
 };
 
