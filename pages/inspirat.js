@@ -2,6 +2,7 @@ import Grid from '../components/Grid';
 import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
+import PageContent from '../components/PageContent';
 
 const Inspirat = ({ data, recursos }) => {
     const { title, content, excerpt, acf, slug } = data;
@@ -13,14 +14,11 @@ const Inspirat = ({ data, recursos }) => {
                 slug={slug}
             />
             <Layout>
-                <figure>
-                    <img src={acf.imatge.url} alt={acf.imatge.alt} loading='lazy' width='100%' />
-                </figure>
-                <h1 className='title' dangerouslySetInnerHTML={{ __html: title.rendered }} />
-
-                <div
-                    className='description'
-                    dangerouslySetInnerHTML={{ __html: content.rendered }}
+                <PageContent
+                    title={title.rendered}
+                    src={acf.imatge.url}
+                    alt={acf.imatge.alt}
+                    content={content.rendered}
                 />
 
                 <Grid data={recursos} />
