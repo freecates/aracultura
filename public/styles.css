@@ -199,4 +199,15 @@ code {
     font-size: 4rem;
     padding: 6rem;
   }
+  .title {
+    width: 125%;
+    margin-left:-12.5%;
+  }
+}
+@media( min-width: 1300px) {
+  .title {
+    width: 150%;
+    margin-left:-25%;
+    font-size: 5rem;
+  }
 }
