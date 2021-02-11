@@ -24,6 +24,9 @@ const Nav = () => {
         <Link href='/inspirat'>
           <a>Inspira't</a>
         </Link>
+        <Link href='/girs'>
+          <a>Gir Digital</a>
+        </Link>
         <Link href='/actualitat'>
           <a>Actualitat</a>
         </Link>
