@@ -27,6 +27,9 @@ const Nav = () => {
         <Link href='/girs'>
           <a>Gir Digital</a>
         </Link>
+        {/* <Link href='/aralabs'>
+          <a>AraLab</a>
+        </Link> */}
         <Link href='/actualitat'>
           <a>Actualitat</a>
         </Link>
