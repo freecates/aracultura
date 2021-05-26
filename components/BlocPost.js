@@ -212,7 +212,7 @@ const BlocPost = ({
             {!com ? null : (
               <div className={styles.card}>
                 <h4>Com</h4>
-                <p>{com}</p>
+                <p dangerouslySetInnerHTML={{ __html: com }} />
               </div>
             )}
             {!per_qui ? null : (
