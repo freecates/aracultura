@@ -1,26 +1,26 @@
 {
-  "name": "aracultura",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p 3001",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "framer-motion": "^1.10.3",
-    "next": "9.4.4",
-    "next-router-events": "^2.1.0",
-    "nextjs-sitemap-generator": "^1.0.0",
-    "nprogress": "^0.2.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-icons": "^3.10.0",
-    "react-intl": "^4.5.0",
-    "react-responsive": "^8.0.3",
-    "react-scroll-up-button": "^1.6.4",
-    "react-share": "^4.1.0",
-    "react-social-icons": "^4.1.0",
-    "sass": "^1.26.3"
-  }
+    "name": "aracultura",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3001",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "framer-motion": "^1.10.3",
+        "next": "^11.1.2",
+        "next-router-events": "^2.1.0",
+        "nextjs-sitemap-generator": "^1.0.0",
+        "nprogress": "^0.2.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-icons": "^3.10.0",
+        "react-intl": "^4.5.0",
+        "react-responsive": "^8.0.3",
+        "react-scroll-up-button": "^1.6.4",
+        "react-share": "^4.1.0",
+        "react-social-icons": "^4.1.0",
+        "sass": "^1.26.3"
+    }
 }

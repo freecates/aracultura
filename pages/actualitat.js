@@ -49,14 +49,14 @@ const Actualitat = ({ data, posts }) => {
 export const getStaticProps = async () => {
     const res = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/pages/161`);
     const data = await res.json();
-    const res2 = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/posts`);
+    const res2 = await fetch(`https://cms.aracultura.com/wp-json/wp/v2/posts?per_page=100`);
     const data2 = await res2.json();
     return {
         props: {
             data: data,
             posts: data2,
         },
-        unstable_revalidate: 60,
+        revalidate: 60,
     };
 };
 
