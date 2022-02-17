@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "framer-motion": "^1.10.3",
-        "next": "^11.1.2",
+        "next": "^12.1.0",
         "next-router-events": "^2.1.0",
         "nextjs-sitemap-generator": "^1.0.0",
         "nprogress": "^0.2.0",
